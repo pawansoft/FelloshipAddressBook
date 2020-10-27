@@ -10,7 +10,7 @@ public class Driver {
         boolean isTerminate = false;
         while (isTerminate != true)
         {
-            System.out.println("Enter 1 for add New Address, Enter 2 for update Address,4 : delete Address, Enter 3 for terminate the program");
+            System.out.println("Enter 1 for add New Address, Enter 2 for update Address,4 : delete Address, Enter 3 for terminate the program, 5: to print details");
             int option=sc.nextInt();
             switch (option){
                 case 1:
@@ -30,6 +30,9 @@ public class Driver {
                     System.out.println("Enter the Id to delete");
                     String key=sc.next();
                     System.out.println(addressBookDAO.deleteAddress(key));
+                    break;
+                case 5:
+                    addressBookDAO.fetchAllDetails();
                     break;
                 default:
                     System.out.println("Please provide valid option");

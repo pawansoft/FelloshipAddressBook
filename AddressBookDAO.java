@@ -1,5 +1,4 @@
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 
 public class AddressBookDAO {
     HashMap <String , AddressBookPojo> addressContainer=new HashMap<String, AddressBookPojo>();
@@ -38,7 +37,7 @@ public class AddressBookDAO {
     public String deleteAddress(String key) {
         try
         {
-            if(addressContainer.containsKey(key) == false)
+            if(addressContainer.containsKey(key)==false)
             {
                 System.out.println("Invalid Key !!!!!!!");
             }
@@ -54,7 +53,24 @@ public class AddressBookDAO {
         }
         return null;
     }
-
+    public void fetchAllDetails()
+    {
+        try
+        {
+            Set keys = addressContainer.keySet();
+            Iterator it= keys.iterator();
+            Collection getValues = addressContainer.values();
+            it =getValues.iterator();
+            while (it.hasNext())
+            {
+                System.out.println("Details are : "+it.next());
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+    }
     public AddressBookPojo askingForDetail()
     {
         AddressBookPojo newAddressBookPojo=new AddressBookPojo();
