@@ -43,9 +43,8 @@ public class AddressBookDAO {
             }
             else {
                 addressContainer.remove(key);
-
+                return "SuccessFully Deleted!!!!!";
             }
-            return "SuccessFully Deleted!!!!!";
         }
         catch (Exception e)
         {
@@ -74,8 +73,6 @@ public class AddressBookDAO {
     public AddressBookPojo askingForDetail()
     {
         AddressBookPojo newAddressBookPojo=new AddressBookPojo();
-        System.out.println("Enter the Id: ");
-        String id=sc.next();
         System.out.println("Enter the fName");
         String fName=sc.next();
         System.out.println("Enter the lName");
@@ -92,7 +89,7 @@ public class AddressBookDAO {
         long phone = sc.nextLong();
         System.out.println("Enter your email Id");
         String email=sc.next();
-        newAddressBookPojo.setId(id);
+
         newAddressBookPojo.setfName(fName);
         newAddressBookPojo.setlName(lName);
         newAddressBookPojo.setAddress(address);

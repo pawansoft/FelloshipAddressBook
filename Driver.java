@@ -14,8 +14,10 @@ public class Driver {
             int option=sc.nextInt();
             switch (option){
                 case 1:
+                    System.out.println("Enter the Id: ");
+                    String keyToSet = sc.next();
                     newAddressBookPojo=addressBookDAO.askingForDetail();
-                    System.out.println(addressBookDAO.saveDetails(newAddressBookPojo.getId(), newAddressBookPojo));
+                    System.out.println(addressBookDAO.saveDetails(keyToSet, newAddressBookPojo));
                     break;
                 case 2:
                     System.out.println("Enter an Id to update: ");

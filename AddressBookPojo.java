@@ -1,5 +1,4 @@
 public class AddressBookPojo {
-    private String id;
     private String fName;
     private String lName;
     private String Address;
@@ -9,14 +8,6 @@ public class AddressBookPojo {
     private long phone;
     private String email;
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public String getfName() {
         return fName;
     }
@@ -24,39 +15,30 @@ public class AddressBookPojo {
     public void setfName(String fName) {
         this.fName = fName;
     }
-
     public String getlName() {
         return lName;
     }
-
     public void setlName(String lName) {
         this.lName = lName;
     }
-
     public String getAddress() {
         return Address;
     }
-
     public void setAddress(String address) {
         Address = address;
     }
-
     public String getCity() {
         return city;
     }
-
     public void setCity(String city) {
         this.city = city;
     }
-
     public String getState() {
         return state;
     }
-
     public void setState(String state) {
         this.state = state;
     }
-
     public int getZip() {
         return zip;
     }
@@ -80,11 +62,9 @@ public class AddressBookPojo {
     public void setEmail(String email) {
         this.email = email;
     }
-
     @Override
     public String toString() {
         return "AddressBookPojo{" +
-                "id='" + id + '\'' +
                 ", fName='" + fName + '\'' +
                 ", lName='" + lName + '\'' +
                 ", Address='" + Address + '\'' +
@@ -96,3 +76,4 @@ public class AddressBookPojo {
                 '}';
     }
 }
+
