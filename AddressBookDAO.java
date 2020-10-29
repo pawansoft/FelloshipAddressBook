@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.*;
 
 public class AddressBookDAO {
@@ -73,6 +74,7 @@ public class AddressBookDAO {
     public AddressBookPojo askingForDetail()
     {
         AddressBookPojo newAddressBookPojo=new AddressBookPojo();
+
         System.out.println("Enter the fName");
         String fName=sc.next();
         System.out.println("Enter the lName");
@@ -89,7 +91,24 @@ public class AddressBookDAO {
         long phone = sc.nextLong();
         System.out.println("Enter your email Id");
         String email=sc.next();
-
+        System.out.println("Enter the number of address :");
+        int addCount=sc.nextInt();
+        ArrayList <Address> containAddress=new ArrayList<>();
+        for (int i=0; i <= addCount; i++)
+        {
+            Address newAddress= new Address();
+            System.out.println("Address type : ");
+            String type=sc.next();
+            System.out.println("Enter street : "  );
+            String street=sc.next();
+            System.out.println("Near By Location : ");
+            String nearByLocation=sc.next();
+            newAddress.setAddressType(type);
+            newAddress.setStreet(street);
+            newAddress.setNearBy(nearByLocation);
+            containAddress.add(newAddress);
+        }
+        newAddressBookPojo.setAddress(containAddress);
         newAddressBookPojo.setfName(fName);
         newAddressBookPojo.setlName(lName);
         newAddressBookPojo.setAddress(address);
@@ -100,6 +119,4 @@ public class AddressBookDAO {
         newAddressBookPojo.setEmail(email);
         return newAddressBookPojo;
     }
-
 }
-

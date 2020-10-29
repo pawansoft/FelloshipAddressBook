@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Driver {
@@ -5,7 +6,6 @@ public class Driver {
         Scanner sc=new Scanner(System.in);
      AddressBookPojo newAddressBookPojo = new AddressBookPojo();
      AddressBookDAO addressBookDAO=new AddressBookDAO();
-
 
         boolean isTerminate = false;
         while (isTerminate != true)
@@ -45,4 +45,3 @@ public class Driver {
 
         }
 }
-
